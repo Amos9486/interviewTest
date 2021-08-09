@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q1</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      class Transportation {
+        constructor(name, wheel, passengers,price) {
+          this.name = name;
+          this.wheel = wheel;
+          this.passengers = passengers;
+          this.price = price;
+        }
+      }
+
+      class Car extends Transportation {
+        constructor(name, wheel, passengers,price) {
+          super(name, wheel, passengers,price);
+          this.carDoor = 4;
+        }
+      }
+
+      class MotorCycle extends Transportation {
+        constructor(name, wheel, passengers,price) {
+          super(name, wheel, passengers,price);
+        }
+      }
+
+      const t1 = new Transportation("汽車", 4, "5人",100000);
+      const t2 = new Transportation("機車", 2, "2人",80000);
+      console.log(t1);
+      console.log(t2);
+
+      const car1 = new Car("汽車", 4, "5人",100000);
+      console.log(car1);
+      const motorCycle1 = new MotorCycle("機車", 2, "2人",80000);
+      console.log(motorCycle1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q3</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+          let a = [0,1,2,3,4,5,6,7,8,9];
+        
+
+
+        //   2.存放 偶數值 與 奇數值
+      // 取奇數
+         let odd = a.filter((v)=>{return v % 2 === 1;})
+         console.log(odd); //[1, 3, 5, 7, 9]
+
+      // 取偶數
+         let even = a.filter((v)=>{return v % 2 ===0;})
+         console.log(even); //[0, 2, 4, 6, 8]
+
+         //   1.奇數總和 - 偶數總合
+        // 奇數總和
+        let oddTotal=0
+         odd.map((v)=>{return oddTotal+=v}).join("");
+         console.log(oddTotal);
+        //  偶數總和
+        let evenTotal=0
+         even.map((v)=>{return evenTotal+=v}).join("");
+         console.log(evenTotal);
+         let finalAnswer =oddTotal - evenTotal;
+         console.log(finalAnswer); //5
+
+    </script>
+  </body>
+</html>

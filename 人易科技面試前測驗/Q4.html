@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q4</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let array = [77, 5, 5, 22, 13, 55, 97, 4, 796, 1, 0, 9];
+      //   sort函式
+      function compare(a, b) {
+        return a - b;
+      }
+      let arraySort = array.sort(compare);
+
+      console.log(arraySort);
+
+      //   Fisher-Yates演算法
+      //   從array的最後一個元素開始，和他前方隨機一個位置的元素交換位置。
+      //   接下來將倒數第二個元素，和其前方隨機一個位置的元素交換位置
+      function Fisher(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+      console.log(array);
+    </script>
+  </body>
+</html>

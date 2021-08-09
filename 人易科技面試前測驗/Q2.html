@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //   1.將「:」轉為全型
+      let a = "人易科技:上 機 測 驗 - 演算法";
+      let array = a.split("");
+      //   console.log(array);
+      array[4] = "：";
+    //   console.log(array); 
+      let arrayQ2_1 = array.map((v)=>{return v}).join("");
+      console.log(arrayQ2_1);// 人易科技：上 機 測 驗 - 演算法
+
+      //   2. 去除中文字間的空白
+      array.splice(6, 1);
+      array.splice(7, 1);
+      array.splice(8, 1);
+    //   console.log(array); 
+      let arrayQ2_2 = array.map((v)=>{return v}).join("");
+      console.log(arrayQ2_2);// 人易科技：上機測驗 - 演算法
+
+    //   3.印出：到 - 5中間字元
+        // console.log(array);
+     let arrayQ2_3 = array.splice(5,5).map((v)=>{return v}).join("");
+     console.log(arrayQ2_3); // 上機測驗
+    </script>
+  </body>
+</html>
